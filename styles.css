@@ -57,34 +57,3 @@ footer {
   color: #7bf4ff;
   transition: color 0.3s;
 }
-#expenses-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#expenses-list li {
-  margin: 5px 0;
-  padding: 5px 10px;
-  background-color: #222;
-  border: 1px solid #555;
-  border-radius: 3px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s;
-}
-
-#expenses-list li:hover {
-  background-color: #333;
-}
-
-#expenses-list li::before {
-  content: "➤";
-  margin-right: 10px;
-}
-
-#expenses-list li span {
-  color: #7bf4ff;
-}
-
