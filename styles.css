@@ -1,45 +1,26 @@
-/* Reset some default styles for consistency */
-body, h1, h2, p {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #333;
+  color: #fff;
 }
 
 header {
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
+  background-color: #222;
 }
 
 main {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #444;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-section {
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #333;
-  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #666;
 }
 
 button {
@@ -56,15 +37,12 @@ button:hover {
 }
 
 #summary {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #666;
   padding-top: 20px;
 }
 
 #summary p {
   font-weight: bold;
-}
-
-#total-income, #total-expenses, #remaining-balance {
   color: #27ae60;
 }
 
@@ -73,5 +51,3 @@ footer {
   margin-top: 20px;
   color: #666;
 }
-
-/* Add more styles as needed */
