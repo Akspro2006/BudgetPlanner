@@ -25,7 +25,7 @@ addExpenseButton.addEventListener('click', () => {
   const expenseAmount = parseFloat(expenseAmountInput.value);
   if (!isNaN(expenseAmount)) {
     expenses += expenseAmount;
-    totalExpenses.textContent = `$${expenses}`;
+    totalExpenses.textContent = `$₹{expenses}`;
     updateRemainingBalance();
     expenseNameInput.value = '';
     expenseAmountInput.value = '';
@@ -34,5 +34,5 @@ addExpenseButton.addEventListener('click', () => {
 
 function updateRemainingBalance() {
   const balance = income - expenses;
-  remainingBalance.textContent = `$${balance}`;
+  remainingBalance.textContent = `$₹{balance}`;
 }
