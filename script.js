@@ -1,36 +1,38 @@
-// ... (same as before) ...
-
+const incomeInput = document.getElementById('income-input');
+const addIncomeButton = document.getElementById('add-income');
 const expenseNameInput = document.getElementById('expense-name');
 const expenseAmountInput = document.getElementById('expense-amount');
 const addExpenseButton = document.getElementById('add-expense');
-const expensesList = document.getElementById('expenses-list'); // New element for the list
+const totalIncome = document.getElementById('total-income');
+const totalExpenses = document.getElementById('total-expenses');
+const remainingBalance = document.getElementById('remaining-balance');
+
+let income = 0;
+let expenses = 0;
+
+addIncomeButton.addEventListener('click', () => {
+  const incomeAmount = parseFloat(incomeInput.value);
+  if (!isNaN(incomeAmount)) {
+    income += incomeAmount;
+    totalIncome.textContent = `₹${income}`;
+    updateRemainingBalance();
+    incomeInput.value = '';
+  }
+});
 
 addExpenseButton.addEventListener('click', () => {
   const expenseName = expenseNameInput.value;
   const expenseAmount = parseFloat(expenseAmountInput.value);
   if (!isNaN(expenseAmount)) {
-    expenses.push({ name: expenseName, amount: expenseAmount }); // Add expense to the expenses array
-    totalExpenses.textContent = `$${calculateTotalExpenses()}`;
+    expenses += expenseAmount;
+    totalExpenses.textContent = `₹${expenses}`;
     updateRemainingBalance();
     expenseNameInput.value = '';
     expenseAmountInput.value = '';
-    renderExpensesList(); // Update the expenses list
   }
 });
 
-function calculateTotalExpenses() {
-  let total = 0;
-  for (const expense of expenses) {
-    total += expense.amount;
-  }
-  return total;
-}
-
-function renderExpensesList() {
-  expensesList.innerHTML = ''; // Clear the list
-  for (const expense of expenses) {
-    const listItem = document.createElement('li');
-    listItem.textContent = `${expense.name}: $${expense.amount}`;
-    expensesList.appendChild(listItem);
-  }
+function updateRemainingBalance() {
+  const balance = income - expenses;
+  remainingBalance.textContent = `₹${balance}`;
 }
