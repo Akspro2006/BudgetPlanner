@@ -14,7 +14,7 @@ addIncomeButton.addEventListener('click', () => {
   const incomeAmount = parseFloat(incomeInput.value);
   if (!isNaN(incomeAmount)) {
     income += incomeAmount;
-    totalIncome.textContent = `$${income}`;
+    totalIncome.textContent = `$₹{income}`;
     updateRemainingBalance();
     incomeInput.value = '';
   }
