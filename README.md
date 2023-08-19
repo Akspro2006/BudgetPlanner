@@ -13,11 +13,3 @@ A simple budget planner web application that allows users to track their income 
 
 1. Clone this repository: `git clone https://github.com/your-username/BudgetPlanner.git`
 2. Open `index.html` in a web browser.
-
-## Screenshots
-
-[Add screenshots or demo GIFs here]
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
